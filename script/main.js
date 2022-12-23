@@ -1,4 +1,13 @@
 // Import the data to customize and insert them into page
+function a(){
+     var audio = document.getElementById('music'); 
+     if(audio.paused){                 
+         audio.play();//audio.play();// 播放  
+     }
+     else{
+          audio();
+     } 
+   }
 const fetchData = () => {
   fetch("customize.json")
     .then(data => data.json())
