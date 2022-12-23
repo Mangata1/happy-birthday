@@ -1,28 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<audio style="display:none; height: 0" id="bg-music" preload="auto" src="img/people.mp3" loop="loop"></audio>
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    function audioAutoPlay() {
-
-	var audio = document.getElementById('bg-music');
-
-         audio.play();
-
-      document.addEventListener("WeixinJSBridgeReady", function () {
-
-           audio.play();
-
-        }, false);
-
-   }
-
-  audioAutoPlay();
-
-});
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
 </head>
 
 <body>
+<video id="video" muted autoplay src="img/people.mp3"></video>
+<button type="button" id="unmuteButton">click！</button>。
+<script>
+unmuteButton.addEventListener('click', function() {
+video.muted = false;
+});
+</script>
   <div class="container">
     <div class="one">
       <h1 class="one">
